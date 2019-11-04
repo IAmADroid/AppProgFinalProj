@@ -2,6 +2,7 @@ package application.model;
 
 public class Pet {
 
+	// test edit
 	static Pet pet1;
 	private String name;
 	private int age; // Age in years only, never changes
