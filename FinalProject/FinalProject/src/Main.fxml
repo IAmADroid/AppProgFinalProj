@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="visitTheShop" layoutX="83.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleShopButton" style="-fx-background-color: #000000;" text="Visit the Shop" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="petNameTextField" layoutX="242.0" layoutY="207.0" prefHeight="23.0" prefWidth="151.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="197.0" layoutY="211.0" text="Pet name:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginErrorText" layoutX="277.0" layoutY="369.0" text="Incorrect credentials" visible="false">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="playAGame" layoutX="510.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleGameButton" style="-fx-background-color: #000000;" text="Play a Game" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="petImage" fitHeight="150.0" fitWidth="200.0" layoutX="219.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="83.0" layoutY="253.0" text="Health:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="367.0" layoutY="253.0" text="Hunger:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="278.0" text="Energy:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="366.0" layoutY="278.0" text="Hygiene:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="301.0" text="Happiness:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="366.0" layoutY="301.0" text="Coins:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="healthString" layoutX="135.0" layoutY="253.0" text="100 / 100">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="energyString" layoutX="135.0" layoutY="278.0" text="80 / 100">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="happinessString" layoutX="135.0" layoutY="301.0" text="50 / 100">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="hungerString" layoutX="419.0" layoutY="253.0" text="10 / 100">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="hygieneString" layoutX="419.0" layoutY="278.0" text="90 / 100">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="coinsString" layoutX="419.0" layoutY="301.0" text="20">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
