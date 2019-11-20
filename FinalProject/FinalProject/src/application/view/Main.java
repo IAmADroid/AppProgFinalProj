@@ -36,6 +36,7 @@ import javafx.event.ActionEvent;
 public class Main extends Application{
 	
 	private Stage primaryStage;
+	private Scene mainScene;
 	
 	@FXML
 	Button visitTheShop; // declare the shop button
@@ -66,7 +67,6 @@ public class Main extends Application{
 	
 	// initializes the scene
 	public void start(Stage primaryStage) throws IOException{
-		
 		this.primaryStage = primaryStage;
 			
 		/* load the FXML */
@@ -75,6 +75,7 @@ public class Main extends Application{
 		Parent root = loaderMainMenu.load();
 			
 		Scene scene = new Scene(root, 640, 480); // create the scene
+		mainScene = scene;
 		primaryStage.setScene(scene); // set the Scene
 		primaryStage.setTitle("Main Menu"); // name the scene
 			
@@ -100,12 +101,12 @@ public class Main extends Application{
 		
 		//Create game scene
 		FXMLLoader loaderMainMenu = new FXMLLoader(getClass().getResource("/GameScene.fxml")); //
-		loaderMainMenu.setController(new Game());
+		loaderMainMenu.setController(new Game(primaryStage, mainScene));
 		Parent root = loaderMainMenu.load();
 			
 		Scene gameScene = new Scene(root, 640, 480);
 		
-		//change scene from main sceen to game scene.
+		//change scene from main scene to game scene.
 		primaryStage.setTitle("GameBro: Flappy Birb");
 		primaryStage.setScene(gameScene);;
 	}
