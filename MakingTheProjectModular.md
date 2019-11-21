@@ -11,5 +11,5 @@ because even with an explanation it can still be confusing.
 
 1. change VM Args
 2. Add JavaFX user library to module path
-3. [change module to "open"](https://web.archive.org/web/20191121152644/http://dineshbajajktn.blogspot.com/2017/11/how-to-get-past-inaccessibleobjectexcep.html) to allow [reflective access](https://docs.oracle.com/javase/9/docs/api/java/lang/reflect/package-summary.html) to methods
+3. [change module to "open"](https://web.archive.org/web/20191121152644/http://dineshbajajktn.blogspot.com/2017/11/how-to-get-past-inaccessibleobjectexcep.html) to allow [reflective access](https://docs.oracle.com/javase/9/docs/api/java/lang/reflect/package-summary.html) to methods. [(relevant SO question)](https://stackoverflow.com/questions/46482364/what-is-an-open-module-in-java-9-and-how-to-use-it)
 4. require the necessary modules from JavaFX
