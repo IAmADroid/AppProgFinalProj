@@ -43,9 +43,21 @@ public class Main extends Application{
 	
 	@FXML
 	Button playAGame; // declare the game button
+		
+	@FXML
+	Button setPetName; // declare the pet name button
 	
 	@FXML
 	ImageView petImage; // declare the pet's image
+	
+	@FXML
+	TextField petNameTextField; // declare the pet name text field
+	
+	@FXML
+	Label promptString;
+	
+	@FXML
+	Label petNameString;
 	
 	@FXML
 	Label healthString;
@@ -83,6 +95,16 @@ public class Main extends Application{
 		
 		petImage.setImage(new Image("/birman.png"));
 
+	}
+	
+		
+	// actions taken upon Set Pet Name button press
+	@FXML
+	protected void handleSetPetNameButton(ActionEvent event) throws IOException{
+		setPetName.setVisible(false);
+		petNameTextField.setVisible(false);
+		promptString.setVisible(false);
+		petNameString.setText(petNameTextField.getText()); // get the input from the pet name textfield
 	}
 
 	// actions taken upon Shop button press
