@@ -14,6 +14,7 @@ public class Pet {
 	private int happiness = 50;
 	private int hygiene = 90;
 	private int hunger = 10;
+	private String petImage = "birman";
 	
 	public Pet (String name, int age) {
 		this.name = name;
@@ -64,6 +65,10 @@ public class Pet {
 		return this.hunger;
 	}
 	
+	public String getPetImage() {
+		return this.petImage;
+	}
+	
 	public void setMaxHP(int maxHP) {
 		this.maxHP = maxHP;
 	}
@@ -98,6 +103,10 @@ public class Pet {
 	
 	public void setHunger(int hunger) {
 		this.hunger = hunger;
+	}
+	
+	public void setPetImage(String petImage) {
+		this.petImage = petImage;
 	}
 	
 }
