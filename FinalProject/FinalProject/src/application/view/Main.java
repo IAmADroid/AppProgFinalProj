@@ -1,7 +1,7 @@
 package application.view;
 
 import java.io.IOException;
-//import java.util.*;
+import java.util.*;
 import application.controller.PetController;
 import javafx.fxml.*;
 import javafx.scene.*;
@@ -52,6 +52,18 @@ public class Main extends Application{
 	
 	@FXML
 	TextField petNameTextField; // declare the pet name text field
+		
+	@FXML
+	RadioButton birmanRadioButton; // declare the Birman radio button
+
+	@FXML
+	RadioButton britishRadioButton; // declare the British Shorthair radio button
+
+	@FXML
+	RadioButton exoticRadioButton; // declare the Exotic Shorthair radio button
+
+	@FXML
+	RadioButton norwegianRadioButton; // declare the Norwegian forest cat radio button
 	
 	@FXML
 	Label promptString;
@@ -76,6 +88,9 @@ public class Main extends Application{
 	
 	@FXML
 	Label coinsString;
+		
+	@FXML
+	Label pleaseEnterANameString;
 	
 	// initializes the scene
 	public void start(Stage primaryStage) throws IOException{
@@ -94,6 +109,49 @@ public class Main extends Application{
 		primaryStage.show(); // show the scene
 		
 		petImage.setImage(new Image("/birman.png"));
+		updateStats();
+
+	}
+	
+	
+	// actions taken upon Birman radio button press
+	@FXML
+	protected void handleBirmanRadioButton(ActionEvent event) throws IOException{
+		PetController.changePetImage("birman");
+		petImage.setImage(new Image(PetController.showPetImage()));
+	}
+	
+	// actions taken upon British radio button press
+	@FXML
+	protected void handleBritishRadioButton(ActionEvent event) throws IOException{
+		PetController.changePetImage("british");
+		petImage.setImage(new Image(PetController.showPetImage()));
+	}
+	
+	// actions taken upon Exotic radio button press
+	@FXML
+	protected void handleExoticRadioButton(ActionEvent event) throws IOException{
+		PetController.changePetImage("exotic");
+		petImage.setImage(new Image(PetController.showPetImage()));
+	}
+	
+	// actions taken upon Norwegian radio button press
+	@FXML
+	protected void handleNorwegianRadioButton(ActionEvent event) throws IOException{
+		PetController.changePetImage("norwegian");
+		petImage.setImage(new Image(PetController.showPetImage()));
+	}
+	
+	
+	// update the stats Strings
+	protected void updateStats(){
+		Map <String, Integer> stats = PetController.getStats();
+		healthString.setText(stats.get("HP") + " / " + stats.get("maxHP"));
+		energyString.setText(stats.get("energy") + " / " + stats.get("maxEnergy"));
+		happinessString.setText(stats.get("happiness") + " / 100");
+		hungerString.setText(stats.get("hunger") + " / 100");
+		hygieneString.setText(stats.get("hygiene") + " / 100");
+		coinsString.setText("" + stats.get("coins"));
 
 	}
 	
@@ -101,10 +159,22 @@ public class Main extends Application{
 	// actions taken upon Set Pet Name button press
 	@FXML
 	protected void handleSetPetNameButton(ActionEvent event) throws IOException{
+		String input = petNameTextField.getText(); // get the input from the pet name textfield
+		
+		if (input.equals("")) {
+			pleaseEnterANameString.setVisible(true);
+			return;
+		}
+		
+		pleaseEnterANameString.setVisible(false);
 		setPetName.setVisible(false);
 		petNameTextField.setVisible(false);
 		promptString.setVisible(false);
-		petNameString.setText(petNameTextField.getText()); // get the input from the pet name textfield
+		petNameString.setText(input);
+		birmanRadioButton.setVisible(false);
+		britishRadioButton.setVisible(false);
+		exoticRadioButton.setVisible(false);
+		norwegianRadioButton.setVisible(false);
 	}
 
 	// actions taken upon Shop button press
