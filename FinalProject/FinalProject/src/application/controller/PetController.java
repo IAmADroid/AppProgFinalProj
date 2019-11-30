@@ -5,8 +5,22 @@ import application.model.Pet;
 
 public class PetController {
 	
+	static Map <String, String> petImages = new HashMap <String, String>();
+	
 	public static void handle() {
 		Pet.pet1 = new Pet("Furby", 3);
+		petImages.put("birman", "./birman.png");
+		petImages.put("british", "./british-shorthair.png");
+		petImages.put("exotic", "./exotic-shorthair.png");
+		petImages.put("norwegian", "./norwegian-forest-cat.png");
+	}
+		
+	public static String showPetImage() {
+		return petImages.get(Pet.pet1.getPetImage());
+	}
+	
+	public static void changePetImage(String petImage) {
+		Pet.pet1.setPetImage(petImage);
 	}
 	
 	public Map <String, Integer> getStats() {
