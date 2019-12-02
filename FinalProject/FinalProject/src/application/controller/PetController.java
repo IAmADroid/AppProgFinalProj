@@ -23,7 +23,7 @@ public class PetController {
 		Pet.pet1.setPetImage(petImage);
 	}
 	
-	public Map <String, Integer> getStats() {
+	public static Map <String, Integer> getStats() {
 		Map <String, Integer> stats = new HashMap <String, Integer>();
 		stats.put("HP", Pet.pet1.getHP());
 		stats.put("maxHP", Pet.pet1.getMaxHP());
