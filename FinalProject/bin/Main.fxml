@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="visitTheShop" layoutX="83.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleShopButton" style="-fx-background-color: #000000;" text="Visit the Shop" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="petNameTextField" layoutX="242.0" layoutY="207.0" prefHeight="23.0" prefWidth="151.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="promptString" layoutX="197.0" layoutY="211.0" text="Pet name:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginErrorText" layoutX="277.0" layoutY="369.0" text="Incorrect credentials" visible="false">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="playAGame" layoutX="510.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleGameButton" style="-fx-background-color: #000000;" text="Play a Game" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="petImage" fitHeight="150.0" fitWidth="200.0" layoutX="219.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="82.0" layoutY="253.0" text="Health:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="367.0" layoutY="253.0" text="Hunger:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="278.0" text="Energy:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="366.0" layoutY="278.0" text="Hygiene:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="301.0" text="Happiness:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="366.0" layoutY="301.0" text="Coins:">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="healthString" layoutX="135.0" layoutY="253.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="energyString" layoutX="135.0" layoutY="278.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="happinessString" layoutX="135.0" layoutY="301.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="hungerString" layoutX="419.0" layoutY="253.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="hygieneString" layoutX="419.0" layoutY="278.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="coinsString" layoutX="419.0" layoutY="301.0">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="setPetName" layoutX="424.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleSetPetNameButton" style="-fx-background-color: #000000;" text="Set Pet Name and Breed" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="petNameString" layoutX="299.0" layoutY="211.0">
+               <font>
+                  <Font name="Bell MT Bold" size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="birmanRadioButton" layoutX="435.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleBirmanRadioButton" selected="true" text="Birman">
+               <toggleGroup>
+                  <ToggleGroup fx:id="image" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="britishRadioButton" layoutX="435.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleBritishRadioButton" text="British Shorthair" toggleGroup="$image" />
+            <RadioButton fx:id="exoticRadioButton" layoutX="435.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleExoticRadioButton" text="Exotic Shorthair" toggleGroup="$image" />
+            <RadioButton fx:id="norwegianRadioButton" layoutX="436.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleNorwegianRadioButton" text="Norwegian Forest Cat" toggleGroup="$image" />
+            <Label fx:id="pleaseEnterANameString" layoutX="275.0" layoutY="232.0" text="Please enter a name!" visible="false">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="feedThePet" layoutX="122.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleFeedThePetButton" style="-fx-background-color: #000000;" text="Feed the pet" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="playWithPet" layoutX="209.0" layoutY="334.0" mnemonicParsing="false" onAction="#handlePlayWithPetButton" style="-fx-background-color: #000000;" text="Play with pet" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="letPetSleep" layoutX="299.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleLetPetSleepButton" style="-fx-background-color: #000000;" text="Let pet sleep" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="131.0" layoutY="362.0" prefHeight="15.0" prefWidth="51.0" text="Cost: 1 coin">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
