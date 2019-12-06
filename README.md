@@ -1,9 +1,6 @@
-Tamagucci
+Tamagotchi
 ======================================
-Application Programming Final Project:
 
-A programming group project for the CS 3443-003 Fall 2019 class.
+The project can be run in Java Eclipse by simply downloading the folder and copying the folder's contents into a Java Project (named FinalProject) and configuring the JRE System Library's "Access Rules" with the additional rule: Accessible "javafx/**"
 
-[Project Proposal](https://docs.google.com/presentation/d/10OqUson-jxoUr7uXWovNMoF_k4AyGR3fA46TXLdNxeQ/edit?usp=sharing)  
-[How to add this repo to your eclipse workspace](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-import-a-GitHub-project-into-Eclipse)  
-[How to make this project modular](MakingTheProjectModular.md)
+No other changes should be necessary.
